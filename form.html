@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elexmedia Loan System</title>
+    <link rel="stylesheet" href="loan.css">
+</head>
+<body>
+    <header>
+        <h1>Elexmedia Loan System</h1>
+    </header>
+
+    <main>
+        <div class="page">
+            <form class="loanForm">
+                <div class="form">
+                    <div class="employee">Employee ID:</div>
+                    <input type="text" id="employeeId" required pattern="E.{3,}" placeholder="E followed by at least 3 characters" class="input-responsive" required>
+                    <span id="employeeIdError" class="error"></span>
+                    <span id="employeeFormatError" class="error"></span>
+
+                    <div class="employee">Employee Name:</div>
+                    <input type="text" id="employeeName" class="input-responsive" required>
+
+                    <div class="employee">Employee Address:</div>
+                    <input type="text" id="employeeAddress" class="input-responsive" required>
+
+                    <div class="employee">Employee Designation:</div>
+                    <select id="employeeDesignation" class="input-responsive" required>
+                        <option value="manager">Manager</option>
+                        <option value="developer">Developer</option>
+                        <option value="analyst">Analyst</option>
+                        <option value="designer">Designer</option>
+                        <option value="engineer">Engineer</option>
+                    </select>
+
+                    <div class="employee">Loan Amount:</div>
+                    <input type="number" id="loanAmount"  class="input-responsive" required>
+
+                    <div class="employee">Date of Loan Taken:</div>
+                    <input type="date" id="dateOfLoan" class="input-responsive" required>
+
+                    <div class="employee">Interest Rate:</div>
+                    <input type="number" id="interestRate" class="input-responsive" required>
+
+                    <div class="employee">Maturity Date:</div>
+                    <input type="date" id="maturityDate" class="input-responsive" required>
+
+                    <button type="button" onclick="calculateLoan()">Calculate Loan</button>
+                </div>
+            </form>
+        
+            <div class="result" style="display: none; margin-top: 20px;">
+                <h2>Login Details</h2>
+                    <table>
+                        <tr>
+                            <td>Employee ID:</td>
+                            <td id="first"></td>
+                        </tr>
+                        <tr>
+                            <td>Employee Name:</td>
+                            <td id="second"></td>
+                        </tr>
+                        <tr>
+                            <td>Employee Address:</td>
+                            <td id="third"></td>
+                        </tr>
+                        <tr>
+                            <td>Employee Designation:</td>
+                            <td id="fourth"></td>
+                        </tr>
+                        <tr>
+                            <td>Loan Amount:</td>
+                            <td id="fifth"></td>
+                        </tr>
+                        <tr>
+                            <td>Date of Loan Taken:</td>
+                            <td id="sixth"></td>
+                        </tr>
+                        <tr>
+                            <td>Interest Rate:</td>
+                            <td id="seventh"></td>
+                        </tr>
+                        <tr>
+                            <td>Maturity Date:</td>
+                            <td id="eighth"></td>
+                        </tr>
+                        <tr>
+                            <td>Total Loan Amount:</td>
+                            <td id="totalLoanAmount"></td>
+                        </tr>
+                        <tr>
+                            <td>Total Interest Payable:</td>
+                            <td id="totalInterest"></td>
+                        </tr>
+                    </table>
+            </div>
+        </div> 
+    </main>   
+    <script src="loan.js"></script>
+</body>
+</html>
